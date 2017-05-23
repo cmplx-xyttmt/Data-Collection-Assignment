@@ -1,0 +1,38 @@
+\documentclass[11pt]{article} 
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper} 
+
+\title{Calculating accurate path costs by tracking traffic.}
+\author{Owomugisha Isaac \\ 15/U/12351/PS \\ 215004131}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This concept paper highlights a method for calculating how long it takes to drive from place in a city to another. The method takes into account factors such as distance between source and destination and traffic congestion at a given place.\\
+The path cost between two points as used in this paper is a measure of how long it takes one to get from one point the other. This cost can be calculated by actually driving between the 2 points many times using different routes, however, that is inefficient and expensive. This paper highlights a method in which data is collected in order to calculate these paths easily.
+
+\section{Problem Statement}
+Given two points, and a path that leads from one point to the other, calculate the cost for that path. \\
+If there are many paths possible, this calculation would help in choosing the most time-efficient path to take.
+
+\section{Objectives}
+\begin{itemize}
+\item To collect the image and geo data necessary.
+\item To use the data collected to calculate how long it will take to get from one place to another.
+\end{itemize}
+
+\section{Methodology}
+Using ODK, "point" data will be collected. Point data consists of 4 fields:point in journey, traffic picture, time, and location.
+\begin{itemize}
+\item Point in journey: This is an identifier for where you are in the journey. Point 0 indicates the starting point. Subsequent points are $1, 2,3, \cdots $
+
+\item Traffic picture: At each point, a picture of the road is taken. The point of this picture is to determine how congested that particular road is. An overhead picture would be prefferable since it can have a better view and coverage of the road.
+
+\item Time: This is the time at which this data point is being recorded. This will help in determining the actual time it took to travel between data points.
+
+\item Location: This consists of the coordinates of the place where this data point is being collected. This information will be used to calculate distances between points. 
+\end{itemize}
+\end{document}
